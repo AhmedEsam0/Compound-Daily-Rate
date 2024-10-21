@@ -261,7 +261,7 @@ button {
 }
 #go-to-bottom span {
   position: fixed;
-  top: 10px;
+  top: 9px;
   right: 9px;
 }
 #output-container {
