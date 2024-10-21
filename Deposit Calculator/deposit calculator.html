@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="deposite calculator style.css" />
+  </head>
+  <body>
+    <header onclick="window.location.href='../index.html'">
+      <h1><b>Smart</b>Saving</h1>
+      <ul id="trigger-ul">
+        <li><a href="../index.html">Investement Calculator</a></li>
+        <li>
+          <a href="../Currency Converter/currency converter.html"
+            >Currency Converter</a
+          >
+        </li>
+        <li><a href="#" class="active">Deposit Calculator</a></li>
+        <span class="material-symbols-outlined menu" title="Menu" id="menu">
+          menu
+        </span>
+      </ul>
+    </header>
+    <main>
+      <div class="holder">
+        <div id="form" class="container">
+          <div class="img-money">
+            <img src="calc.png" alt="" />
+          </div>
+
+          <div class="content">
+            <div class="title-t">
+              <h2>Initial Deposit Calculator</h2>
+              <h5>
+                Calculate your starting account balance required to achieve a
+                compound daily return for a certain annual rate, just by typing
+                the amount of money you need on the first day from your account.
+              </h5>
+            </div>
+
+            <div class="content-form">
+              <div class="df">
+                <p class="keyword">
+                  <label for="first-day-return"
+                    ><b class="brag">First day return</b></label
+                  >
+                </p>
+                <div style="position: relative">
+                  <input
+                    id="first-day-return"
+                    type="text"
+                    placeholder="First day return"
+                    autocomplete="off"
+                    tabindex="1"
+                  />
+                  <div id="first-day-return-error" class="error-message">
+                    <h6>Enter a valid First day return</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="df">
+                <p class="keyword">
+                  <label for="rate-percentage"
+                    ><b class="brag">Annual Rate</b></label
+                  >
+                </p>
+                <div style="position: relative">
+                  <input
+                    id="rate-percentage"
+                    type="text"
+                    placeholder="Annual Rate"
+                    autocomplete="off"
+                    tabindex="2"
+                  />
+                  <div id="rate-percentage-error" class="error-message">
+                    <h6>Enter a valid Annual Rate</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="but">
+              <button
+                type="button"
+                tabindex="4"
+                id="btn"
+                class="primary-btn"
+                tabindex="4"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="output-container"
+        class="container"
+        style="text-align: center"
+      ></div>
+    </main>
+    <script src="system.js"></script>
+  </body>
+</html>

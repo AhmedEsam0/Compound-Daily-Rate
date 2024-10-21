@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #1932c126;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+ul {
+  list-style: none;
+
+  & a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+}
+header {
+  background-color: rgba(255, 255, 255, 0.355);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 130px;
+  position: relative;
+  & b {
+    color: #6381f9;
+  }
+  h1 {
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    gap: 70px;
+  }
+}
+h5 {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  line-height: 1.4;
+}
+.active {
+  color: #6381f9;
+}
+header ul li {
+  display: block;
+}
+header ul li a {
+  padding: 10px 0;
+  text-align: center;
+}
+header ul li a:hover {
+  color: #6381f9;
+}
+header ul li .active::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background-color: #6381f9;
+  bottom: -30px;
+}
+header .menu {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+main {
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+.container {
+  margin: 20px auto;
+  border-radius: 8px;
+  padding: 38px 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.225);
+  backdrop-filter: blur(1px);
+  width: 620px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 40px;
+  color: #6381f9;
+  margin-bottom: 40px;
+}
+
+.currency-section {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.currency-section input {
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+  font-size: 18px;
+  height: 42px;
+  transition: all 0.4s ease-in-out;
+}
+.currency-section input:focus {
+  border: 2px solid #6381f9;
+  box-shadow: 0 0 15px #6381f9;
+}
+.currency-section select {
+  width: 220px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  height: 42px;
+  background-color: #f9f9f9;
+}
+
+.swap {
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #455bb1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swap:hover {
+  background-color: #334799;
+}
+
+.bx {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.rate-container p {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 1rem;
+}
+
+.rate-container h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 20px;
+}
+@media (max-width: 400px) {
+  main {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 500px) {
+  .container h1 {
+    font-size: 1.72rem;
+  }
+}
+@media (max-width: 767.5px) {
+  header ul {
+    gap: 0;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    right: 20px;
+    top: 100%;
+    border-radius: 8px;
+    display: none;
+  }
+  header ul li a {
+    padding: 30px 0;
+  }
+  header ul li .active::after {
+    display: none;
+  }
+  header ul li {
+    border-bottom: 1px solid #ddd;
+  }
+  header ul li a.active {
+    border-bottom: 2px solid #6381f9;
+  }
+  header .menu {
+    display: block;
+  }
+  header {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 40px 12px;
+    margin-top: 30px;
+  }
+  .container h1 {
+    font-size: 30px;
+  }
+  .currency-section {
+    width: 100%;
+  }
+  .currency-section input {
+    font-size: 14px;
+    width: 120%;
+  }
+
+  .currency-section select {
+    font-size: 12px;
+    padding: 10px 0;
+    width: 180%;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    padding: 20px 50px;
+  }
+  main {
+    padding: 15px 10px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 620px;
+  }
+}
