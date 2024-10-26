@@ -69,6 +69,7 @@ header .menu {
   translate: 0 -50%;
   right: 20px;
   cursor: pointer;
+  z-index:1200;
   display: none;
 }
 main {
