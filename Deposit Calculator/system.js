@@ -1,7 +1,22 @@
+let triggerUL = document.getElementById("trigger-ul");
+let menu = document.getElementById("menu");
 let Btn = document.getElementById("btn");
 let BtnClicked = false;
-let inputFields = document.querySelectorAll("input"); //:not(.cc-input)
+let inputFields = document.querySelectorAll("input");
 let outputContainer = document.getElementById("output-container");
+
+menu.style.color = "rgb(99, 129, 249)";
+menu.onclick = () => {
+  if (menu.style.color == "rgb(99, 129, 249)") {
+    menu.style.color = "rgb(0,0,0)";
+    triggerUL.style.display = "block";
+  } else {
+    menu.style.color = "rgb(99, 129, 249)";
+    triggerUL.style.display = "none";
+  }
+};
+
+
 function calculateStartingBalance(firstDayReturn, annualRate) {
   outputContainer.innerHTML = ""; // Clear existing content
   firstDayReturn = parseFormattedNumber(
