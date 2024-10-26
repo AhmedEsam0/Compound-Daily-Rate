@@ -32,7 +32,7 @@ header {
   & b {
     color: #6381f9;
   }
-  h1{
+  h1 {
     cursor: pointer;
   }
 
@@ -69,7 +69,6 @@ header .menu {
   translate: 0 -50%;
   right: 20px;
   cursor: pointer;
-  z-index:1200;
   display: none;
 }
 main {
@@ -241,7 +240,7 @@ button {
 }
 #back-to-top span {
   position: fixed;
-  bottom: 9px;
+  bottom: 8px;
   right: 8px;
 }
 /* New CSS for go-to-bottom button */
@@ -262,7 +261,7 @@ button {
 }
 #go-to-bottom span {
   position: fixed;
-  top: 8.5px;
+  top: 8px;
   right: 8px;
 }
 #output-container {
@@ -276,6 +275,19 @@ button {
 #output-container p {
   font-size: 24px;
   font-weight: 600;
+}
+input.error {
+  border: 2px solid red;
+  box-shadow: 0 0 15px red;
+}
+
+.error-message {
+  color: red;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding-top: 2px;
+  display: none;
 }
 
 /* Footer CSS */
@@ -299,20 +311,6 @@ button {
 
 #footer a:hover {
   text-decoration: underline;
-}
-
-input.error {
-  border: 2px solid red;
-  box-shadow: 0 0 15px red;
-}
-
-.error-message {
-  color: red;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  padding-top: 2px;
-  display: none;
 }
 
 /* Responsive Design */
@@ -355,6 +353,12 @@ input.error {
   }
 }
 @media (max-width: 767.5px) {
+  header {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+  }
   header ul {
     gap: 0;
     flex-direction: column;
@@ -381,11 +385,6 @@ input.error {
   }
   header .menu {
     display: block;
-  }
-  header {
-    display: block;
-    padding: 20px 0;
-    text-align: center;
   }
 
   .holder #form {
