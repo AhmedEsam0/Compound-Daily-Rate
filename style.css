@@ -240,8 +240,8 @@ button {
 }
 #back-to-top span {
   position: fixed;
-  bottom: 10px;
-  right: 7px;
+  bottom: 9px;
+  right: 8px;
 }
 /* New CSS for go-to-bottom button */
 #go-to-bottom {
@@ -261,8 +261,8 @@ button {
 }
 #go-to-bottom span {
   position: fixed;
-  top: 9px;
-  right: 7px;
+  top: 8.5px;
+  right: 8px;
 }
 #output-container {
   padding: 20px;
