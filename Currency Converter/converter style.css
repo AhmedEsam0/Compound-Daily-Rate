@@ -183,6 +183,12 @@ main {
   }
 }
 @media (max-width: 767.5px) {
+    header {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+  }
   header ul {
     gap: 0;
     flex-direction: column;
@@ -209,11 +215,6 @@ main {
   }
   header .menu {
     display: block;
-  }
-  header {
-    display: block;
-    padding: 20px 0;
-    text-align: center;
   }
 
   .container {
